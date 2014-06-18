@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: BreadCrumbs For JointLogic BFolder
+Bundle-SymbolicName: com.jointlogic.breadcrumbs.sampleapp; singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.jointlogic.breadcrumbs.sampleapp.Activator
+Bundle-Vendor: JOINTLOGIC
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy

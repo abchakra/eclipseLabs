@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="com.jointlogic.breadcrumbs.sampleapp.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="Perspective"
+            class="com.jointlogic.breadcrumbs.sampleapp.Perspective"
+            id="com.jointlogic.breadcrumbs.sampleapp.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            name="View"
+            class="com.jointlogic.breadcrumbs.sampleapp.bcviewerapi.BreadcrumbsView2"
+            id="com.jointlogic.breadcrumbs.sampleapp.view">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="*">
+         <view
+               standalone="true"
+               minimized="false"
+               relative="org.eclipse.ui.editorss"
+               relationship="left"
+               id="com.jointlogic.breadcrumbs.sampleapp.view">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               label="File">
+            <command
+                  commandId="org.eclipse.ui.file.exit"
+                  label="Exit">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+
+</plugin>
