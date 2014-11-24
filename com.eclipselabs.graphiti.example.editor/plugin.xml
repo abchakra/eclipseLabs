@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.graphiti.ui.diagramTypes">
+      <diagramType
+            name="Poollane Diagram Type"
+            type="poollane"
+            description="Poollane Diagram"
+            id="com.eclipselabs.graphiti.example.editor.DiagramType">
+      </diagramType>
+   </extension>
+   <extension
+         point="org.eclipse.graphiti.ui.diagramTypeProviders">
+      <diagramTypeProvider
+            class="com.eclipselabs.graphiti.example.editor.diagram.PoolLaneDiagramTypeProvider"
+            description="Editor for Poollane Diagrams"
+            id="com.eclipselabs.graphiti.example.editor.DiagramTypeprovider"
+            name="Poollane Diagram Type Provider">
+         <diagramType
+               id="com.eclipselabs.graphiti.example.editor.DiagramType">
+         </diagramType>
+      </diagramTypeProvider>
+   </extension>
+</plugin>

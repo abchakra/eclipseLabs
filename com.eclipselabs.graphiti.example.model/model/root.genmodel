@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.eclipselabs.graphiti.example.model/src" modelPluginID="com.eclipselabs.graphiti.example.model"
+    modelName="Root" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>root.ecore</foreignModel>
+  <genPackages prefix="Root" disposableProviderFactory="true" interfacePackageSuffix="com.eclipselabs.graphiti.example.model"
+      metaDataPackageSuffix="com.eclipselabs.graphiti.example.model" classPackageSuffix="com.eclipselabs.graphiti.example.model.impl"
+      utilityPackageSuffix="com.eclipselabs.graphiti.example.model.util" providerPackageSuffix="com.eclipselabs.graphiti.example.model.provider"
+      presentationPackageSuffix="com.eclipselabs.graphiti.example.model.presentation"
+      testsPackageSuffix="com.eclipselabs.graphiti.example.model.tests" ecorePackage="root.ecore#/">
+    <genClasses ecoreClass="root.ecore#//Pool">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference root.ecore#//Pool/lanes"/>
+    </genClasses>
+    <genClasses ecoreClass="root.ecore#//Lane">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference root.ecore#//Lane/tasks"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference root.ecore#//Lane/start"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference root.ecore#//Lane/end"/>
+    </genClasses>
+    <genClasses ecoreClass="root.ecore#//Start">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference root.ecore#//Start/lane"/>
+    </genClasses>
+    <genClasses ecoreClass="root.ecore#//End">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference root.ecore#//End/lane"/>
+    </genClasses>
+    <genClasses ecoreClass="root.ecore#//Task">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference root.ecore#//Task/lane"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute root.ecore#//Task/name"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
